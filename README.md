@@ -5,7 +5,7 @@
 
 ### Task #3: https://soundpallete.surge.sh/
 ### Task #4: https://untitledlab4.surge.sh/ 
-### Task #5: registrationapp-lab5.surge.sh
+### Task #5: https://registrationapp-lab5.surge.sh
 
 ##### Figma url: https://www.figma.com/file/BfTFY6Q602u4vdZqwfZzom/Client-First-Template-9-(Community)?node-id=706%3A667
 
