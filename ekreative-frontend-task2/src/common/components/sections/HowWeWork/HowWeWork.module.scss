@@ -1,0 +1,90 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+$card_icon_size: 3.125em;
+$card_icon_border_radius: 0.5em;
+
+.how_we_work {
+  display: flex;
+  justify-content: space-between;
+  padding: $sectionPaddingY $sectionPaddingX;
+  color: $dark_blue;
+  background-color: $grey;
+
+  .left_side {
+    p {
+      @extend .body1;
+      display: block;
+      width: 25em;
+      margin-top: 1em;
+      opacity: $opacity7;
+    }
+
+    a {
+      @extend .arrow_link;
+      @extend .label1;
+      display: block;
+      margin-top: 1em;
+      color: $royal_blue;
+    }
+  }
+
+  .cards_wrapper {
+    display: grid;
+    max-width: 45%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2.5em 1.5em;
+  }
+}
+
+.work_card {
+  > h5 {
+    margin-top: 0.5em;
+  }
+
+  > p {
+    @extend .body1;
+    margin-top: 0.5em;
+    opacity: $opacity7;
+  }
+}
+
+.card_icon {
+  position: relative;
+  overflow: hidden;
+  width: $card_icon_size;
+  height: $card_icon_size;
+  border-radius: $card_icon_border_radius;
+  background-color: $royal_blue;
+
+  > .icon_part1 {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    width: $card_icon_size;
+    height: $card_icon_size;
+    border-radius: $card_icon_border_radius;
+    background-color: $yellow;
+  }
+
+  > .icon_part2 {
+    position: absolute;
+    top: -0.55em;
+    right: -0.55em;
+    width: $card_icon_size;
+    height: $card_icon_size;
+    border-radius: $card_icon_border_radius;
+    background-color: #5239fa;
+  }
+
+  > .icon_text {
+    @extend .label1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+}

@@ -1,0 +1,32 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.about_us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $sectionPaddingY $sectionPaddingX;
+  color: $dark_blue;
+
+  .pre_title {
+    @extend .label1;
+  }
+
+  h1 {
+    margin-top: 0.2em;
+  }
+
+  .desc {
+    @extend .body1;
+    margin-top: 2em;
+    opacity: $opacity7
+  }
+
+  img {
+    width: 34em;
+    height: 21em;
+    margin-left: 8em;
+    object-fit: cover;
+  }
+}

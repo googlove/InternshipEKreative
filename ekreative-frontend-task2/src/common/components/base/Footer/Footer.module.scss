@@ -1,0 +1,117 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.main_footer {
+  width: 100%;
+
+  main {
+    padding: $sectionPaddingY $sectionPaddingX 0 $sectionPaddingX;
+    background-color: $tint_blue;
+
+    .top_wrapper {
+      display: flex;
+      color: white;
+
+      .footer_about {
+        min-width: 40%;
+
+        .footer_logo {
+          font-size: 1.875rem;
+        }
+
+        p {
+          @extend .label2;
+          margin-top: 1em;
+          opacity: $opacity8;
+        }
+      }
+
+      .lets_talk {
+        margin-left: 8.75em;
+
+        > p {
+          @extend .body1;
+          margin-top: 1em;
+          opacity: $opacity8;
+        }
+
+        .socials {
+          margin-top: 1.875em;
+
+          a {
+            color: white;
+
+            &:not(:first-child) {
+              margin-left: 1.75em;
+            }
+
+            svg {
+              width: 1em;
+              height: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .contacts {
+      display: flex;
+      width: 35%;
+      min-width: fit-content;
+      padding: 1.125em 2.25em;
+      white-space: nowrap;
+      color: $dark_blue;
+      background-color: $yellow;
+
+      > div {
+
+        &:not(:first-child) {
+          margin-left: 1.875em;
+        }
+
+        p {
+          @extend .label1;
+        }
+
+        a {
+          @extend .body2;
+          opacity: $opacity8;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.875em $sectionPaddingX;
+    color: $dark_blue;
+
+    nav ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        &:not(:first-child) {
+          margin-left: 2em;
+        }
+
+        a {
+          &.active {
+            font-weight: 800;
+          }
+
+          &:not(.active):hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

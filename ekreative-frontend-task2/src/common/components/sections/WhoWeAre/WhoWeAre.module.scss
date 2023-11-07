@@ -1,0 +1,41 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.who_we_are {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 $sectionPaddingX $sectionPaddingY;
+  color: $dark_blue;
+
+  .top {
+    padding: 5em;
+    background-color: #f4f5f5;
+
+    > p {
+      @extend .label2;
+    }
+
+    .content_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      article {
+        width: 48%;
+
+        p {
+          @extend .body1;
+          margin-top: 1em;
+          opacity: $opacity7;
+        }
+      }
+    }
+  }
+
+  > img {
+    width: 100%;
+    height: 21.25em;
+    object-fit: cover;
+  }
+}

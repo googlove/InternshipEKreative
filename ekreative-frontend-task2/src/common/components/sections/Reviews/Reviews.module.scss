@@ -1,0 +1,123 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+$authorImgSize: 3em;
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  padding: $sectionPaddingY $sectionPaddingX;
+  background-color: rgb(244, 246, 252, 0.5); /* #f4f6fc; */
+
+  .left_side {
+    width: 20em;
+
+    p {
+      @extend .body1;
+      margin-top: 1em;
+      opacity: $opacity7
+    }
+  }
+
+  .right_side {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 45em;
+    height: 15em;
+    margin-left: 6.8em;
+
+    .review {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      transition: left 0.5s ease, opacity 0.3s ease;
+
+      &.left_review {
+        left: -100%;
+        opacity: 0;
+      }
+
+      &.active_review {
+        left: 0;
+      }
+
+      &.right_review {
+        left: 100%;
+        opacity: 0;
+      }
+
+      .author {
+        display: flex;
+        margin-top: 3em;
+
+        img {
+          width: $authorImgSize;
+          height: $authorImgSize;
+          border-radius: 100%;
+        }
+
+        .author_wrapper {
+          margin-left: 1em;
+
+          :not(:first-child) {
+            font-size: 0.75rem;
+          }
+
+          .author_name {
+            @extend .label1;
+          }
+        }
+      }
+    }
+
+    .controls {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3em;
+        height: 3em;
+        padding: 0;
+        cursor: pointer;
+        border: none;
+        border-radius: 100%;
+
+        svg {
+          font-size: 1.375rem;
+          display: inline-block;
+          transition: transform 0.3s ease
+        }
+
+        &:hover svg {
+          transform: scale(1.2);
+        }
+
+        &.left_arrow {
+          opacity: $opacity6;
+          background: transparent;
+        }
+
+        &.right_arrow {
+          margin-left: 0.5em;
+          background-color: #5239fa;
+
+          svg {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+

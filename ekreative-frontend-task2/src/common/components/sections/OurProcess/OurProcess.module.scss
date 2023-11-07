@@ -1,0 +1,56 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+$workLineCircleSize: 1.5em;
+
+.our_process {
+  padding: 0 $sectionPaddingX $sectionPaddingY;
+  color: $dark_blue;
+
+  h2 {
+    text-align: center;
+  }
+
+  .process_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em;
+    gap: 3.5em;
+
+    .work_line {
+      display: flex;
+      align-items: center;
+
+      .circle {
+        min-width: $workLineCircleSize;
+        min-height: $workLineCircleSize;
+        border-radius: 100%;
+        background-color: $royal_blue;
+      }
+
+      .line {
+        width: 100%;
+        height: 0.2em;
+        margin-left: 1.2em;
+        opacity: 0.4;
+        background-image: linear-gradient(to right, $royal_blue 33%, white 0%);
+        background-position: bottom;
+        background-size: 0.8em 1px;
+      }
+    }
+
+    .process {
+      h6 {
+        margin-top: 1.5em;
+      }
+
+      p {
+        @extend .body1;
+        margin-top: 0.5em;
+        opacity: $opacity7;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "src/assets/styles/style-constants";
+@import "src/assets/styles/color-palette";
+
+.posts {
+  padding: 6em $sectionPaddingX;
+
+  > header {
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    margin-bottom: 2em;
+
+    .order, .searchBar {
+      height: 100%;
+      width: 17.5em;
+    }
+  }
+
+  > main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+
+    .noPosts {
+      font-size: 1.5rem;
+      width: 100%;
+      margin: 2em 0;
+      text-align: center;
+    }
+  }
+}
+
+/*
+    Mobile
+ */
+
+.postsMobile {
+  padding: 4em $sectionPaddingXMobile;
+
+  > header {
+    flex-direction: column;
+    height: 7em;
+
+    > * {
+      width: 100%;
+    }
+
+    .order {
+      margin-top: 1em;
+      width: 100%;
+
+      select {
+        width: 100%;
+      }
+    }
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
+

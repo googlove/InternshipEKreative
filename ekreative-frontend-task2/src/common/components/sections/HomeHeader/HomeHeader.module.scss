@@ -1,0 +1,44 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.extended_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $sectionPaddingY $sectionPaddingX;
+  color: white;
+  background-color: $tint_blue;
+
+  .left_part {
+
+    p {
+      @extend .body2;
+      margin-top: 1.5em;
+      opacity: $opacity7;
+    }
+
+    .buttons_wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 3em;
+      white-space: nowrap;
+      gap: 2.5em;
+
+      button {
+        @extend .btn;
+        @extend .yellow;
+        font-family: "Manrope", serif;
+        font-size: 1.125rem;
+      }
+
+      a {
+        @extend .arrow_link;
+      }
+    }
+  }
+
+  img {
+    margin-left: 8em;
+  }
+}

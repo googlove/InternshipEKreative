@@ -1,0 +1,75 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.features {
+  padding: $sectionPaddingY $sectionPaddingX;
+  text-align: center;
+  color: $dark_blue;
+  background-color: $grey;
+
+  p {
+    @extend .label2;
+  }
+
+  > h2 {
+    display: inline-block;
+    width: 15em;
+    margin-top: 0.75em;
+  }
+
+  .cards_wrapper {
+    display: grid;
+    margin-top: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2em;
+    grid-row-gap: 1.5em;
+
+    .card {
+      &:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+
+      &:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+
+      &:nth-child(3) { grid-area: 1 / 3 / 2 / 4; }
+
+      &:nth-child(4) { grid-area: 2 / 1 / 3 / 2; }
+
+      &:nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
+
+      &:nth-child(6) { grid-area: 2 / 3 / 3 / 4; }
+
+      &:nth-child(7) { grid-area: 3 / 1 / 4 / 2; }
+
+      &:nth-child(8) { grid-area: 3 / 2 / 4 / 3; }
+
+      &:nth-child(9) { grid-area: 3 / 3 / 4 / 4; }
+    }
+  }
+}
+
+.card {
+  max-width: 25em;
+  padding: 3em;
+  text-align: left;
+  background-color: white;
+
+  img {
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
+  }
+
+  h6 {
+    margin-top: 1.5em;
+  }
+
+  p {
+    @extend .body1;
+    margin-top: 0.75em;
+    opacity: $opacity7;
+  }
+}
+
+
+

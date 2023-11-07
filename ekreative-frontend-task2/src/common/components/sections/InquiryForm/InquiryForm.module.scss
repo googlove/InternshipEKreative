@@ -1,0 +1,124 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.inquiry_form {
+  display: flex;
+  height: fit-content;
+  padding: 0 $sectionPaddingX;
+
+  .left_side {
+    position: relative;
+    width: 60%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .left_side_wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 6em;
+      color: white;
+      background: rgba(28, 30, 83, 0.5);
+
+      p {
+        @extend .body2;
+        margin-top: 1.5em;
+      }
+    }
+  }
+
+  .right_side {
+    width: 40%;
+    padding: 6em 6em 3em;
+    color: white;
+    background-color: $tint_blue;
+
+    > p {
+      @extend .label2;
+      margin-top: 1em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.5em;
+
+      p {
+        position: relative;
+
+        &:not(:first-child) {
+          margin-top: 1em;
+        }
+
+        input {
+          @extend .body1;
+          box-sizing: border-box;
+          width: 100%;
+          height: 4em;
+          padding: 0 2em;
+          opacity: 0.5;
+          color: $grey;
+          border: 2px solid rgba(255, 255, 255, 0.05);
+          border-radius: 0.5em;
+          background: transparent;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:is(:focus, :not(:placeholder-shown)) + label {
+            font-size: 0.8rem;
+            top: 1px; /*half of input border */
+            padding: 0 0.2em;
+            opacity: 1;
+          }
+        }
+
+        label {
+          position: absolute;
+          z-index: 0;
+          @extend .body1;
+          top: 50%;
+          left: 2em;
+          display: block;
+          transition: top 0.3s ease, font-size 0.3s ease, opacity 0.3s ease;
+          transform: translateY(-50%);
+          opacity: 0.5;
+          color: $grey;
+          background-color: $tint_blue;
+        }
+      }
+
+      button {
+        @extend .btn;
+        @extend .yellow;
+        font-family: $fontManrope;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.125rem;
+        width: 100%;
+        height: 3.5em;
+        margin-top: 2em;
+      }
+    }
+
+    a {
+      display: block;
+      margin-top: 1.75em;
+      margin-left: -1em;
+      text-align: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

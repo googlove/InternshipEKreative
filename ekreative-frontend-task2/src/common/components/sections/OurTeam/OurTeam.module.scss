@@ -1,0 +1,89 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+$cardImgSize: 10em;
+
+.our_team {
+  padding: $sectionPaddingY $sectionPaddingX;
+  text-align: center;
+  color: $dark_blue;
+  background-color: $grey;
+
+  .card_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    gap: 2em;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding: 2em 3em;
+      background-color: white;
+
+      .image_wrapper {
+        position: relative;
+        overflow: hidden;
+        width: $cardImgSize;
+        height: $cardImgSize;
+        margin: 0 auto;
+        border-radius: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .image_overlay {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          transition: opacity 0.3s ease-out;
+          opacity: 0;
+          border-radius: 100%;
+          background: linear-gradient(348.37deg, #5239fa 17.97%, rgba(255, 255, 255, 0) 79.2%);
+
+          .socials {
+            padding-top: 100%;
+            transition: padding-top 0.3s ease-in-out;
+            pointer-events: none;
+            color: white;
+
+            a {
+              pointer-events: auto;
+
+              svg {
+                font-size: 1rem;
+                margin-left: 0.5em;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .image_overlay {
+            opacity: 1;
+          }
+
+          .socials {
+            padding-top: 7.5em;
+          }
+        }
+      }
+
+      h6 {
+        margin-top: 1em;
+      }
+
+      p {
+        @extend .body1;
+        opacity: $opacity7;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.faq {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    padding: 8em 10em;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.faq .left_side {
+    width: 20em;
+}
+
+.faq .left_side a {
+    display: block;
+    margin-top: 1em;
+}
+
+.faq .left_side a:hover {
+    text-decoration: underline;
+}
+
+.faq .right_side hr {
+    margin: 0;
+}
+
+.faq .question {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    width: 45em;
+    height: 2em;
+    padding: 2em 0 2em 2em;
+    -o-transition: height 0.3s ease;
+    -webkit-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+}
+
+.faq .question.open_answer {
+    overflow: clip;
+    height: 7.5em;
+}
+
+.faq .question_wrapper {
+    position: relative;
+    margin-left: 3.5em;
+}
+
+.faq .answer {
+    display: block;
+    margin-top: 1.2em;
+    opacity: 0.87;
+}
+
+.faq .open_sign {
+    position: absolute;
+    top: 0.5em;
+    right: 0;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.faq .open_sign i {
+    font-size: 1rem;
+    -o-transition: transform 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.faq .question.open_answer .open_sign i {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}

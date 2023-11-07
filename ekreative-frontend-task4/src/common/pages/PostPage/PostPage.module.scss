@@ -1,0 +1,16 @@
+@import "src/assets/styles/style-constants";
+
+.postPage {
+  .mainPost {
+    box-sizing: border-box;
+    padding: 0 $sectionPaddingX;
+  }
+}
+
+.postPageMobile {
+  .mainPost {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $sectionPaddingXMobile;
+  }
+}

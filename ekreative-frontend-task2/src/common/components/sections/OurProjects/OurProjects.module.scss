@@ -1,0 +1,106 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+$mainProjectWidth: 48em;
+$mainProjectHeight: 36em;
+
+$projectsGap: 2em;
+
+$secondaryProjectWidth: calc($mainProjectWidth / 2);
+$secondaryProjectHeight: calc($mainProjectHeight / 2 - $projectsGap / 2);
+
+.projects {
+  padding: $sectionPaddingY $sectionPaddingX;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $dark_blue;
+
+    a {
+      @extend .arrow_link;
+      @extend .label2;
+    }
+  }
+
+  main {
+    display: grid;
+    margin-top: 4em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: $projectsGap;
+
+    .project {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image_desc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        color: white;
+        background: linear-gradient(329.39deg, $tint_blue -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+
+        &.image_desc_1 {
+          box-sizing: border-box;
+          width: 46.5%;
+          padding: 19.5em 2em 0;
+
+          p {
+            @extend .body2;
+            margin-top: 1em;
+            opacity: 0.8;
+          }
+
+          a {
+            @extend .arrow_link;
+            @extend .body2;
+            display: block;
+            margin-top: 2.5em;
+            color: $yellow;
+          }
+        }
+
+        &.image_desc_2 {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 6em 3.5em 0;
+
+          a {
+            @extend .arrow_link;
+            @extend .body2;
+            display: block;
+            margin-top: 1em;
+            color: $yellow;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        width: $mainProjectWidth;
+        height: $mainProjectHeight;
+        grid-area: 1 / 1 / 3 / 2;
+      }
+
+      &:nth-child(2) {
+        width: $secondaryProjectWidth;
+        height: $secondaryProjectHeight;
+        grid-area: 1 / 2 / 2 / 3;
+      }
+
+      &:nth-child(3) {
+        width: $secondaryProjectWidth;
+        height: $secondaryProjectHeight;
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+  }
+}

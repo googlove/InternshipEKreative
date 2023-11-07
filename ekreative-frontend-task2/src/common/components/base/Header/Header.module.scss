@@ -1,0 +1,62 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.main_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4em;
+  padding: 1em $sectionPaddingX;
+  background-color: $tint_blue;
+
+  .logo {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .right_wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    nav {
+      @extend .body2;
+      display: flex;
+      align-items: center;
+
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+          margin-left: 2em;
+          white-space: nowrap;
+
+          a {
+            text-decoration: none;
+            color: #bbbbcb;
+
+            &.active {
+              color: white;
+            }
+
+            &:not(.active):hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .contact_us {
+      @extend .body2;
+      @extend .btn;
+      height: 100%;
+      margin-left: 3em;
+      color: white;
+      border: 2px solid rgba(244, 246, 252, 0.2);
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.mission_and_vision {
+  padding: $sectionPaddingY $sectionPaddingX;
+  color: $dark_blue;
+  background-color: $accent;
+
+  article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:first-child) {
+      margin-top: 6em;
+    }
+
+    .text_wrapper {
+      width: 40%;
+
+      .pre_header{
+        @extend .label2;
+      }
+
+      h3 {
+        margin-top: 0.2em;
+      }
+
+      .desc {
+        @extend .body1;
+        margin-top: 1em;
+        opacity: $opacity7;
+      }
+    }
+
+    img {
+      width: 32em;
+      height: 21em;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,385 @@
+/*
+    About us
+ */
+
+.about_us {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8em 10em;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.about_us h1 {
+    margin-top: 0.2em;
+}
+
+.about_us .desc {
+    margin-top: 2em;
+    opacity: 0.7;
+}
+
+.about_us img {
+    width: 34em;
+    height: 21em;
+    margin-left: 8em;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/*
+    Who we are
+ */
+
+.who_we_are {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10em 8em;
+}
+
+.who_we_are .top {
+    padding: 5em;
+    background-color: #f4f5f5;
+}
+
+.who_we_are .top .content_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.who_we_are .content_wrapper article {
+    width: 48%;
+}
+
+.who_we_are .content_wrapper article p {
+    margin-top: 1em;
+    opacity: 0.7;
+}
+
+.who_we_are > img {
+    width: 100%;
+    height: 21.25em;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/*
+    Our process
+ */
+
+.our_process {
+    padding: 0 10em 8em;
+}
+
+.our_process h2 {
+    text-align: center;
+}
+
+.our_process .process_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    gap: 3.5em;
+}
+
+.our_process .work_line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+.our_process .work_line .circle {
+    min-width: 1.5em;
+    min-height: 1.5em;
+    border-radius: 100%;
+}
+
+.our_process .work_line .line {
+    width: 100%;
+    height: 0.2em;
+    margin-left: 1.2em;
+    opacity: 0.4;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #2405f2), color-stop(0%, white));
+    background-image: -o-linear-gradient(left, #2405f2 33%, white 0%);
+    background-image: linear-gradient(to right, #2405f2 33%, white 0%);
+    background-position: bottom;
+    background-size: 0.8em 1px;
+}
+
+.our_process .process h6 {
+    margin-top: 1.5em;
+}
+
+.our_process .process p {
+    margin-top: 0.5em;
+    opacity: 0.7;
+}
+
+/*
+    Our mission and vision
+ */
+
+.mission_and_vision {
+    padding: 8em 10em;
+    background-color: #eef4fa;
+}
+
+.mission_and_vision article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.mission_and_vision article:not(:first-child) {
+    margin-top: 6em;
+}
+
+.mission_and_vision article .text_wrapper {
+    width: 40%;
+}
+
+.mission_and_vision article .text_wrapper h3 {
+    margin-top: 0.2em;
+}
+
+.mission_and_vision article .text_wrapper .body1 {
+    margin-top: 1em;
+    opacity: 0.7;
+}
+
+.mission_and_vision article img {
+    width: 32em;
+    height: 21em;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/*
+    Our benefits
+ */
+
+.our_benefits {
+    padding: 8em 10em;
+    text-align: center;
+}
+
+.our_benefits h2 {
+    display: inline-block;
+    width: 20em;
+}
+
+.our_benefits .cards_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    gap: 2em;
+}
+
+.our_benefits .card {
+    width: 100%;
+    padding: 3em;
+    text-align: left;
+}
+
+.our_benefits .card img {
+    width: 2em;
+    height: 2em;
+}
+
+.our_benefits .card > h6 {
+    margin-top: 1em;
+}
+
+.our_benefits .card p {
+    margin-top: 0.75em;
+    opacity: 0.7;
+}
+
+.our_benefits .partners {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em;
+    text-align: left;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    gap: 2em;
+}
+
+.our_benefits .users p {
+    opacity: 0.7;
+}
+
+.our_benefits .partners_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #535460;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    gap: 3em;
+}
+
+.our_benefits .partner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+
+.our_benefits .partner img {
+    width: 2em;
+    height: 2em;
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+}
+
+.our_benefits .partner p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 0.4em;
+}
+
+/*
+    Our team
+ */
+
+.our_team {
+    padding: 8em 10em;
+    text-align: center;
+}
+
+.our_team .card_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    gap: 2em;
+}
+
+.our_team .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 2em 3em;
+    background-color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+
+.our_team .card .image_wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 10em;
+    height: 10em;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.our_team .card .image_wrapper img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.our_team .card .image_wrapper .image_overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-transition: opacity 0.3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+    border-radius: 100%;
+    background: -o-linear-gradient(101.63deg, #5239fa 17.97%, rgba(255, 255, 255, 0) 79.2%);
+    background: linear-gradient(348.37deg, #5239fa 17.97%, rgba(255, 255, 255, 0) 79.2%);
+}
+
+.our_team .image_wrapper .image_overlay .socials {
+    padding-top: 100%;
+    -o-transition: padding-top 0.3s ease-in-out;
+    -webkit-transition: padding-top 0.3s ease-in-out;
+    transition: padding-top 0.3s ease-in-out;
+    pointer-events: none;
+    color: white;
+}
+
+.our_team .image_wrapper .socials a {
+    pointer-events: auto;
+}
+
+.our_team .image_wrapper .socials i {
+    font-size: 1rem;
+    margin-left: 0.5em;
+}
+
+.our_team .image_wrapper:hover .image_overlay {
+    opacity: 1;
+}
+
+.our_team .image_wrapper:hover .socials {
+    padding-top: 7.5em;
+}
+
+.our_team .card h6 {
+    margin-top: 1em;
+}
+
+.our_team .card p {
+    opacity: 0.7;
+}

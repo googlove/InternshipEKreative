@@ -1,0 +1,66 @@
+@import "src/assets/styles/colorPalette";
+@import "src/assets/styles/templates";
+
+.stage1 {
+  .phoneSet {
+    margin-top: 2em;
+    @include fieldsetBox;
+
+    .formDesc {
+      font-family: Poppins, serif;
+      font-size: 14px;
+      line-height: 1.43;
+      text-align: left;
+      color: $shark;
+    }
+
+    .phoneWrapper {
+      display: flex;
+      align-items: center;
+      height: 2.5em;
+      margin-top: 2em;
+
+      gap: 1em;
+
+      .countryCode {
+        width: 5.5em;
+        min-width: 5.5em;
+        height: 100%;
+
+        > div {
+          height: 100%;
+        }
+      }
+
+      input {
+        @include input;
+      }
+    }
+
+    .error {
+      font-family: Poppins, serif;
+      font-size: 0.75rem;
+      margin-top: 0.75em;
+      color: red;
+    }
+
+  }
+
+  .submitButton {
+    @include button;
+    margin-top: 2em;
+  }
+}
+
+.stage1Mobile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  .phoneSet {
+    padding: 0 1.5em;
+    border: none;
+  }
+}
+

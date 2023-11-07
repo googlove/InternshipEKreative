@@ -1,0 +1,148 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.pricing_plans {
+  padding: 8em 10em;
+  text-align: center;
+  color: $dark_blue;
+
+  > p {
+    @extend .body2;
+    display: inline-block;
+    width: 35em;
+    margin-top: 1em;
+    opacity: 0.7;
+  }
+
+  .plans_wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 46em;
+    margin-top: 4em;
+    gap: 2em;
+
+    .plan {
+      $p: &;
+
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 4em 3em;
+      border-radius: 0.75em;
+
+      &:not(.center) {
+        background-color: $grey;
+      }
+
+      &.center {
+        color: white;
+        background-color: #1c1e53;
+
+        .background_circle {
+          position: absolute;
+          z-index: 1;
+          bottom: 10em;
+          left: calc(50% - 36em);
+          width: 72em;
+          height: 72em;
+          border-radius: 100%;
+          background-color: rgba(255, 255, 255, 0.06);
+          clip-path: ellipse(100% 52% at 50% 100%);
+        }
+
+        header p {
+          color: $yellow;
+        }
+
+        main ul {
+          transform: translateY(-1em);
+        }
+
+        @at-root #{$p}.center footer button {
+          @extend .yellow;
+        }
+      }
+
+      > * {
+        z-index: 2;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        p {
+          @extend .body1;
+          color: $royal_blue;
+        }
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: left;
+
+        .desc {
+          margin-top: 1.125em;
+
+          p {
+            @extend .body2;
+            margin-top: 0.5em;
+            opacity: 0.7;
+          }
+        }
+
+        ul {
+          margin: auto 0;
+          padding: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 0.75em;
+
+            &:not(:first-child) {
+              margin-top: 1.125em;
+            }
+
+            &.not_active {
+              img {
+                filter: grayscale(100%);
+              }
+
+              p {
+                opacity: 0.7;
+              }
+            }
+
+            img {
+              width: 1.4em;
+              min-width: 1.4em;
+              height: 1.625em;
+              object-fit: contain;
+            }
+
+            p {
+              @extend .body1;
+            }
+          }
+        }
+      }
+
+      footer {
+        margin-top: 1.5em;
+
+        button {
+          @extend .btn;
+          @extend .dark_blue;
+          width: 80%;
+          height: 4em;
+        }
+      }
+    }
+  }
+}

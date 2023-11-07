@@ -1,0 +1,147 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-constants";
+
+.categoryPage {
+  padding: 0 $sectionPaddingX 4em;
+
+  header {
+    padding: 6em 0;
+
+    .preHeading {
+      font-weight: 600;
+      line-height: 1.5rem;
+      color: $primary600;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 3.75rem;
+      margin-top: 0.1em;
+      letter-spacing: -0.02em;
+      color: $grey900;
+    }
+
+    .desc {
+      font-size: 1.25em;
+      font-weight: 400;
+      line-height: 1.875;
+      margin-top: 0.5em;
+      color: $grey600;
+
+    }
+  }
+
+  > main {
+    display: flex;
+
+    aside {
+      width: 25%;
+      min-width: 15em;
+
+      .searchBar {
+        width: 100%;
+        height: 2.75em;
+      }
+
+      > p {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        margin-top: 2em;
+        color: $primary700;
+      }
+
+      ul {
+        margin-top: 1.25em;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 2.75em;
+          padding-left: 0.875em;
+          cursor: pointer;
+
+          &.active {
+            font-weight: 600;
+            color: $grey700;
+            border-radius: 0.375em;
+            background: $grey50;
+          }
+        }
+      }
+    }
+
+    .posts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin-left: 4em;
+      gap: 2em;
+
+      .noPosts {
+        font-size: 1.5rem;
+        width: 100%;
+        margin: 2em 0;
+        text-align: center;
+      }
+    }
+
+  }
+}
+
+/*
+    Mobile
+ */
+
+.categoryPageMobile {
+  padding: 0 $sectionPaddingXMobile 4em;
+
+  > header {
+    padding: 4em 0;
+
+    .preHeading {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+    }
+
+    .desc {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  > main {
+    flex-direction: column;
+
+    .filters {
+      width: 100%;
+      padding-bottom: 3em;
+
+      > *, input {
+        width: 100%;
+      }
+
+      .categories {
+        height: 3em;
+        margin-top: 1em;
+      }
+    }
+
+    .posts {
+      align-items: center;
+      flex-direction: column;
+      margin: 0;
+      row-gap: 3em;
+    }
+  }
+}

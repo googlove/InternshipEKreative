@@ -1,0 +1,72 @@
+@import "color-palette";
+
+.body1 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.body2 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+.label1 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.label2 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+/*
+    btn
+ */
+
+.btn {
+  padding: 1em 3em;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  border: unset;
+  border-radius: 2.625em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn.yellow {
+  background-color: $yellow;
+  color: $dark;
+}
+
+.btn.yellow:hover {
+  background-color: #fde4a6;
+}
+
+.btn.dark_blue {
+  color: white;
+  background-color: $dark_blue;
+}
+
+.btn.dark_blue:hover {
+  background-color: #535460;
+}
+
+/*
+    arrow_link
+ */
+
+.arrow_link::after {
+  position: absolute;
+  margin-left: 0.5em;
+  content: "\2192";
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow_link:hover::after {
+  transform: translateX(0.5em);
+}

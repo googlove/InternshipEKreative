@@ -1,0 +1,47 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+.blog {
+  padding: $sectionPaddingY $sectionPaddingX;
+  color: $dark_blue;
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4em;
+    gap: 2em;
+
+    .post {
+      img {
+        width: 100%;
+        max-width: 24em;
+        height: 17em;
+        object-fit: cover;
+      }
+
+      .date {
+        @extend .label2;
+        margin-top: 2.5em;
+        opacity: 0.7;
+      }
+
+      h6 {
+        margin-top: 0.5em;
+      }
+
+      .desc {
+        @extend .body1;
+        margin-top: 1em;
+        opacity: 0.7;
+      }
+
+      a {
+        @extend .arrow_link;
+        @extend .label2;
+        display: block;
+        margin-top: 1.5em;
+      }
+    }
+  }
+}

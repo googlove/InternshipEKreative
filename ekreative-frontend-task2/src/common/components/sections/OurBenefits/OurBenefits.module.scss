@@ -1,0 +1,86 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-templates";
+@import "src/assets/styles/style-constants";
+
+$cardImgSize: 2em;
+$partnersImgSize: 2em;
+
+.our_benefits {
+  padding: $sectionPaddingY $sectionPaddingX;
+  text-align: center;
+  color: $dark_blue;
+
+  h2 {
+    display: inline-block;
+    width: 20em;
+  }
+
+  .cards_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+    gap: 2em;
+
+    .card {
+      width: 100%;
+      padding: 3em;
+      text-align: left;
+      background-color: $grey;
+
+      img {
+        width: $cardImgSize;
+        height: $cardImgSize;
+      }
+
+      > h6 {
+        margin-top: 1em;
+      }
+
+      p {
+        @extend .body1;
+        margin-top: 0.75em;
+        opacity: $opacity7;
+      }
+    }
+  }
+
+  .partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em;
+    text-align: left;
+    gap: 2em;
+
+    .users p {
+      @extend .body1;
+      opacity: $opacity7
+    }
+
+    .partners_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #535460;
+      gap: 3em;
+
+      .partner {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: $partnersImgSize;
+          height: $partnersImgSize;
+          object-fit: scale-down;
+        }
+
+        p {
+          font-size: 1.25rem;
+          font-weight: 700;
+          display: inline-block;
+          margin-left: 0.4em;
+        }
+      }
+    }
+  }
+}

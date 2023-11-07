@@ -1,0 +1,104 @@
+.main_footer {
+    width: 100%;
+}
+
+.main_footer main {
+    padding: 6em 10em 0 10em;
+}
+
+.main_footer main .top_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: white;
+}
+
+.main_footer .footer_about {
+    min-width: 40%;
+}
+
+.main_footer .footer_logo {
+    font-size: 1.875rem;
+}
+
+.main_footer .footer_about p {
+    margin-top: 1em;
+    opacity: 0.8;
+}
+
+.main_footer .lets_talk {
+    margin-left: 8.75em;
+}
+
+.main_footer .lets_talk > p {
+    margin-top: 1em;
+    opacity: 0.8;
+}
+
+.main_footer .socials {
+    margin-top: 1.875em;
+}
+
+.main_footer .socials a:not(:first-child) {
+    margin-left: 1.625em;
+}
+
+.main_footer .socials a i {
+    color: white;
+}
+
+.main_footer .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 35%;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    padding: 1.125em 2.25em;
+    white-space: nowrap;
+}
+
+.main_footer .contacts > div:not(:first-child) {
+    margin-left: 1.875em;
+}
+
+.main_footer .contacts > div a {
+    opacity: 0.8;
+}
+
+.main_footer .contacts > div a:hover {
+    text-decoration: underline;
+}
+
+.main_footer footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.875em 10em;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.main_footer footer nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+}
+
+.main_footer nav ul li:not(:first-child) {
+    margin-left: 2em;
+}
+
+.main_footer nav ul li.nav_current {
+    font-weight: 800;
+}
+
+.main_footer nav ul li:not(.nav_current):hover {
+    text-decoration: underline;
+}

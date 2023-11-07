@@ -1,0 +1,162 @@
+@import "src/assets/styles/color-palette";
+@import "src/assets/styles/style-constants";
+
+$logoSize: 2em;
+
+@mixin logo {
+  display: flex;
+  align-items: center;
+
+  .logoIcon {
+    width: $logoSize;
+    height: $logoSize;
+  }
+
+  h2 {
+    margin-left: 0.4em;
+    white-space: nowrap;
+    color: $grey900;
+  }
+}
+
+.main_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75em $sectionPaddingX;
+  background-color: $grey50;
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      @include logo;
+
+      .logoIcon {
+        //Styles imported from Header.logo. I add this to avoid warning in jsx file
+      }
+    }
+
+    > nav {
+      margin-left: 2.5em;
+
+      ul {
+        display: flex;
+        padding: 0;
+        list-style: none;
+        gap: 2em;
+
+        li a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .auth {
+    display: flex;
+    height: 2.75em;
+    gap: 1em;
+
+    button {
+      height: 100%;
+      padding: 0.625em 1.125em;
+      cursor: pointer;
+      border: none;
+      border-radius: 0.5em;
+
+      &.logIn {
+        white-space: nowrap;
+        color: $grey600;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+$mobileNavWidth: 10em;
+
+.main_header_mobile {
+  // position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25em $sectionPaddingXMobile;
+  background-color: $grey50;
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      @include logo;
+
+      .logoIcon {
+        //Styles imported from Header.logo. I add this to avoid warning in jsx file
+      }
+    }
+  }
+
+  > svg {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+  }
+
+  .mobileNav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: -$mobileNavWidth;
+    box-sizing: border-box;
+    width: $mobileNavWidth;
+    height: 100vh;
+    padding: 3em 1em 1em;
+    transition: right 0.3s ease-in-out;
+    background-color: $primary600;
+
+    &.open {
+      right: 0;
+    }
+
+    > svg {
+      position: absolute;
+      top: 1.5em;
+      right: 1em;
+      width: 1.5em;
+      height: 1.5em;
+      cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      list-style: none;
+      gap: 1em;
+
+      li {
+        a:not(.activeNav):hover {
+          text-decoration: underline;
+        }
+
+        a.activeNav {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .auth {
+      margin-top: 2em;
+
+      button {
+        width: 100%;
+
+        &:not(:first-child) {
+          margin-top: 0.5em;
+        }
+      }
+    }
+  }
+}
